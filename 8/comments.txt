@@ -1,0 +1,1 @@
+a:2:{i:0;a:2:{s:4:"user";s:5:"iliya";s:7:"comment";s:26:"*** good very *** *** daau";}i:1;a:2:{s:4:"user";s:5:"iliya";s:7:"comment";s:33:"<b>*** good very *** *** daau</b>";}}

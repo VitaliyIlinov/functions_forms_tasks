@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <form action="6.php" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="photo">Photo:</label>
+            <input type="file" id="photo" name="photo[]"  multiple>
+            <p class="help-block">Please download image.</p>
+        </div>
+        <button type="submit" name="submit" class="btn btn-default">Submit</button>
+    </form>
+    <div><?=$form_was_send ? 'yes': 'no'; ?></div>
+    <?php if(file_exists('name_image.txt')): ?>
+    <table class="table table-bordered">
+        <?php for($i=0;$i<count($result);$i++): ?>
+     <tr>
+         <td>
+             <img src="<?='gallery'.DIRECTORY_SEPARATOR.$result[$i];?>">
+         </td>
+     </tr>
+        <?php endfor; ?>
+    </table>
+    <?php endif; ?>
+</div>
+</body>
+</html>
